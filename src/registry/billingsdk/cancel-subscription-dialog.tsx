@@ -237,25 +237,25 @@ export function CancelSubscriptionDialog({
           )}
           {/* Action Buttons */}
           {!showConfirmation ? (
-            <div className="mt-auto flex flex-col gap-3 sm:flex-row">
-              <Button
-                className="flex-1"
-                onClick={handleKeepSubscription}
-                disabled={isLoading}
-              >
-                {isLoading
-                  ? "Processing..."
-                  : keepButtonText || "Keep My Subscription"}
-              </Button>
-              <Button
-                variant="destructive"
-                className="flex-1"
-                onClick={handleContinueCancellation}
-                disabled={isLoading}
-              >
-                {continueButtonText || "Continue Cancellation"}
-              </Button>
-            </div>
+          <div className="mt-auto flex flex-col gap-3 lg:flex-row">
+            <Button
+              className="flex-1"
+              onClick={handleKeepSubscription}
+              disabled={isLoading}
+            >
+              {isLoading
+                ? "Processing..."
+                : keepButtonText || "Keep My Subscription"}
+            </Button>
+            <Button
+              variant="destructive"
+              className="flex-1"
+              onClick={handleContinueCancellation}
+              disabled={isLoading}
+            >
+              {continueButtonText || "Continue Cancellation"}
+            </Button>
+          </div>
           ) : (
             <div className="mt-auto flex flex-col gap-4">
               <div className="bg-muted/50 rounded-lg p-4 text-center">
@@ -271,26 +271,26 @@ export function CancelSubscriptionDialog({
                     "This action cannot be undone and you'll lose access to all premium features."}
                 </p>
               </div>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Button
-                  variant="outline"
-                  className="flex-1"
-                  onClick={handleGoBack}
-                  disabled={isLoading}
-                >
-                  {goBackButtonText || "Go Back"}
-                </Button>
-                <Button
-                  variant="destructive"
-                  className="flex-1"
-                  onClick={handleConfirmCancellation}
-                  disabled={isLoading}
-                >
-                  {isLoading
-                    ? "Cancelling..."
-                    : confirmButtonText || "Yes, Cancel Subscription"}
-                </Button>
-              </div>
+            <div className="flex flex-col gap-3 lg:flex-row">
+              <Button
+                variant="outline"
+                className="flex-1"
+                onClick={handleGoBack}
+                disabled={isLoading}
+              >
+                {goBackButtonText || "Go Back"}
+              </Button>
+              <Button
+                variant="destructive"
+                className="flex-1"
+                onClick={handleConfirmCancellation}
+                disabled={isLoading}
+              >
+                {isLoading
+                  ? "Cancelling..."
+                  : confirmButtonText || "Yes, Cancel Subscription"}
+              </Button>
+            </div>
             </div>
           )}
         </div>
